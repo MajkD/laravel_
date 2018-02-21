@@ -1,0 +1,15 @@
+# this compose fil ecan be used in two different ways:
+# 1. without specifying: 'docker-compose up'
+#    that will use this file and the override settings from docker-compose.override.yml
+# 2. with specifying: 'docker-compose -f docker-compose.yml up'
+#    that will skip the override settings!
+version: '2'
+
+services:
+  postgres:
+    image: 'postgres:9.6'
+    environment:
+      POSTGRES_USER: 'cdm'
+      POSTGRES_PASSWORD: 'cdm'
+    volumes:
+      - 'postgres:/var/lib/postgresql/data'
