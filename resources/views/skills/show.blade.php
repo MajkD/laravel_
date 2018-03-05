@@ -1,4 +1,4 @@
-@extends('layouts.app')
+<!-- @extends('layouts.app')
 
 @section('content')
 
@@ -6,4 +6,4 @@
   <p>{{ $skill->name }}</p>
   {!! link_to_route('skills.index', 'Back', [], ['type'=>'button', 'class'=>'btn btn-primary btn-sm']) !!}
 
-@endsection
+@endsection -->

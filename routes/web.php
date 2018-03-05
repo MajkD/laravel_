@@ -15,4 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('skills', 'SkillsController');
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('skills', 'SkillsController@index')->name('skills.index');

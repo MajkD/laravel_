@@ -1,4 +1,4 @@
-<div class='row'>
+<!-- <div class='row'>
   <div class='col-sm-4'>
     {!! Form::open(['route' => 'skills.store']) !!}
 
@@ -12,4 +12,4 @@
 
     {!! Form::close() !!}
   </div>
-</div>
+</div> -->
