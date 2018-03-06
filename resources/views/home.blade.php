@@ -17,7 +17,7 @@
                     You are logged in!
                 </div>
             </div>
-            {!! link_to_route('skills.index', 'View Skills', [], ['type'=>'button', 'class'=>'btn btn-primary btn-sm']) !!}
+            {!! link_to_route('admin.skills.index', 'View Skills', [], ['type'=>'button', 'class'=>'btn btn-primary btn-sm']) !!}
             {!! link_to_route('logout', 'Logout', [], ['type'=>'button', 'class'=>'btn btn-danger btn-sm']) !!}
         </div>
     </div>

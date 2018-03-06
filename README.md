@@ -7,7 +7,7 @@ composer require "laravelcollective/html":"^5.2.0"
  php artisan serve
 
 ### Track logs
- tail -f laravel.log
+ tail -f storage/logs/laravel.log
 
 ### vue compiler
 npm run watch

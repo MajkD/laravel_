@@ -4,7 +4,11 @@ namespace App\Http\Controllers\Api\V1;
 
 use App\Models\Skill;
 use App\Http\Requests\SkillFormRequest;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+
+// use Log;
+// Log::error("Api/V1/SkillsController - store");
 
 class SkillsController extends Controller {
 
@@ -15,48 +19,29 @@ class SkillsController extends Controller {
     return Skill::all();
   }
 
+  public function store(SkillFormRequest $request)
+  {
+    $skill = Skill::create($request->all());
+    return $skill;
+  }
+
   public function show($id)
   {
-    // $skill = Skill::find($id);
-    // return view('skills.show')->with('skill', $skill);
+    return Skill::findOrFail($id);
   }
 
-  public function create()
+  public function update(SkillFormRequest $request, $id)
   {
-    // $new_skill = new Skill();
-    // return view('skills.create')->with('skill', $new_skill); ;
-  }
-
-  public function edit($id)
-  {
-    // $skill = Skill::find($id);
-    // return view('skills.edit')->with('skill', $skill); 
+    $skill = Skill::findOrFail($id);
+    $skill->update($request->all());
+    return $skill;
   }
 
   public function destroy($id)
-  {
-    // $skill = Skill::find($id);
-    // if($skill) {
-    //   if(!$skill->delete()) {
-    //     // DO stuff
-    //   }
-    // }
-    // return redirect('skills');
-  }
-
-  public function store(SkillFormRequest $request)
-  {
-    // $skill = Skill::find($request->get('id'));
-    // if($skill){
-    //   $skill->name = $request->get('name');
-    // } else {
-    //    $skill = new Skill();
-    //    $skill->name =  $request->get('name');
-    // }
-    // if ($skill->save()) {
-    //   // do stuff
-    // }
-    // return redirect('skills');
-  }
+    {
+        $skill = Skill::findOrFail($id);
+        $skill->delete();
+        return '';
+    }
 
 }
