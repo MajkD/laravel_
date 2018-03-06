@@ -11,3 +11,8 @@ composer require "laravelcollective/html":"^5.2.0"
 
 ### vue compiler
 npm run watch
+
+
+### TODO
+
+Is it possible to re-use html templates in vue components?
