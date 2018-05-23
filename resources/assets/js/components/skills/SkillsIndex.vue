@@ -16,6 +16,7 @@
           <tbody>
             <tr v-for="skill, index in skills">
                 <td>{{ skill.name }}</td>
+                <td>{{ skill.description }}</td>
                 <td>
                     <router-link :to="{name: 'editSkill', params: {id: skill.id}}" class="btn btn-xs btn-default">
                         Edit

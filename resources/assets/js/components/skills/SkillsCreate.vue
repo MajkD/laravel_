@@ -13,6 +13,10 @@
               <label class="control-label">Skill name</label>
               <input type="text" v-model="skill.name" class="form-control">
             </div>
+            <div class="col-xs-12 form-group">
+              <label class="control-label">Skill description</label>
+              <input type="text" v-model="skill.description" class="form-control">
+            </div>
           </div>
           <div class="row">
             <div class="col-xs-12 form-group">
