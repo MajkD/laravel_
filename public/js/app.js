@@ -13889,7 +13889,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(13);
-module.exports = __webpack_require__(46);
+module.exports = __webpack_require__(50);
 
 
 /***/ }),
@@ -13903,7 +13903,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_skills_SkillsIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_skills_SkillsIndex_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_skills_SkillsCreate_vue__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_skills_SkillsCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_skills_SkillsCreate_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_skills_SkillsEdit_vue__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_skills_SkillsEdit_vue__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_skills_SkillsEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_skills_SkillsEdit_vue__);
 
 /**
@@ -49872,9 +49872,9 @@ if (false) {
 var disposed = false
 var normalizeComponent = __webpack_require__(3)
 /* script */
-var __vue_script__ = __webpack_require__(52)
+var __vue_script__ = __webpack_require__(45)
 /* template */
-var __vue_template__ = __webpack_require__(51)
+var __vue_template__ = __webpack_require__(46)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -49914,63 +49914,63 @@ module.exports = Component.exports
 
 /***/ }),
 /* 45 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-var disposed = false
-var normalizeComponent = __webpack_require__(3)
-/* script */
-var __vue_script__ = __webpack_require__(53)
-/* template */
-var __vue_template__ = __webpack_require__(54)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/skills/SkillsEdit.vue"
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-92eb081c", Component.options)
-  } else {
-    hotAPI.reload("data-v-92eb081c", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            skill: {
+                name: ''
+            }
+        };
+    },
+    methods: {
+        saveForm: function saveForm() {
+            var app = this;
+            var newSkill = app.skill;
+            axios.post('/api/v1/skills', newSkill).then(function (resp) {
+                console.log(resp);
+                app.$router.push({ path: '/' });
+            }).catch(function (resp) {
+                console.log(resp);
+                alert("Could not create your skill");
+            });
+        }
+    }
+});
 
 /***/ }),
 /* 46 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 47 */,
-/* 48 */,
-/* 49 */,
-/* 50 */,
-/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -50064,64 +50064,54 @@ if (false) {
 }
 
 /***/ }),
-/* 52 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/* 47 */
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+var disposed = false
+var normalizeComponent = __webpack_require__(3)
+/* script */
+var __vue_script__ = __webpack_require__(48)
+/* template */
+var __vue_template__ = __webpack_require__(49)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/skills/SkillsEdit.vue"
 
-/* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {
-        return {
-            skill: {
-                name: ''
-            }
-        };
-    },
-    methods: {
-        saveForm: function saveForm() {
-            var app = this;
-            var newSkill = app.skill;
-            axios.post('/api/v1/skills', newSkill).then(function (resp) {
-                console.log(resp);
-                app.$router.push({ path: '/' });
-            }).catch(function (resp) {
-                console.log(resp);
-                alert("Could not create your skill");
-            });
-        }
-    }
-});
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-92eb081c", Component.options)
+  } else {
+    hotAPI.reload("data-v-92eb081c", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
 
 /***/ }),
-/* 53 */
+/* 48 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -50189,7 +50179,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 54 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -50281,6 +50271,12 @@ if (false) {
     require("vue-hot-reload-api")      .rerender("data-v-92eb081c", module.exports)
   }
 }
+
+/***/ }),
+/* 50 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "f284b2dd707cdcb49aa7ca0e23978b45",
@@ -652,16 +652,16 @@
         },
         {
             "name": "laravelcollective/html",
-            "version": "v5.6.3",
+            "version": "v5.6.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LaravelCollective/html.git",
-                "reference": "41cd9291a69bd24f2184e504be041348a87308a8"
+                "reference": "42c0854e00d6bb3346883d122b444fbf15a13ecb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/41cd9291a69bd24f2184e504be041348a87308a8",
-                "reference": "41cd9291a69bd24f2184e504be041348a87308a8",
+                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/42c0854e00d6bb3346883d122b444fbf15a13ecb",
+                "reference": "42c0854e00d6bb3346883d122b444fbf15a13ecb",
                 "shasum": ""
             },
             "require": {
@@ -675,7 +675,7 @@
             "require-dev": {
                 "illuminate/database": "5.6.*",
                 "mockery/mockery": "~1.0",
-                "phpunit/phpunit": "~5.4"
+                "phpunit/phpunit": "~7.1"
             },
             "type": "library",
             "extra": {
@@ -716,7 +716,7 @@
             ],
             "description": "HTML and Form Builders for the Laravel Framework",
             "homepage": "https://laravelcollective.com",
-            "time": "2018-02-12T14:19:42+00:00"
+            "time": "2018-05-10T17:15:15+00:00"
         },
         {
             "name": "league/flysystem",
