@@ -1,8 +1,5 @@
 <template>
   <div>
-    <div class="form-group">
-      <router-link :to="{name: 'createSkill'}" class="btn btn-success">Create New Skill</router-link>
-    </div>
 
     <div class="panel panel-default">
       <div class="panel-body">
@@ -10,6 +7,7 @@
           <thead>
             <tr>
                 <th>Name</th>
+                <th>Description</th>
                 <th width="150">&nbsp;</th>
             </tr>
           </thead>
@@ -31,6 +29,10 @@
           </tbody>
         </table>
       </div>
+    </div>
+
+    <div class="form-group">
+      <router-link :to="{name: 'createSkill'}" class="btn btn-success">Create New Skill</router-link>
     </div>
 
   </div>

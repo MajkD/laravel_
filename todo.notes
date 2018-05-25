@@ -1,4 +1,5 @@
 - Create new resource and use in table
 - Linked with skill?
+  - Select based on joined tables
 
 - Is it possible to re-use html templates in vue components?

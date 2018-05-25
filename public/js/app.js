@@ -49730,6 +49730,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -49770,22 +49772,6 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c(
-      "div",
-      { staticClass: "form-group" },
-      [
-        _c(
-          "router-link",
-          {
-            staticClass: "btn btn-success",
-            attrs: { to: { name: "createSkill" } }
-          },
-          [_vm._v("Create New Skill")]
-        )
-      ],
-      1
-    ),
-    _vm._v(" "),
     _c("div", { staticClass: "panel panel-default" }, [
       _c("div", { staticClass: "panel-body" }, [
         _c("table", { staticClass: "table table-bordered table-striped" }, [
@@ -49842,7 +49828,23 @@ var render = function() {
           )
         ])
       ])
-    ])
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "form-group" },
+      [
+        _c(
+          "router-link",
+          {
+            staticClass: "btn btn-success",
+            attrs: { to: { name: "createSkill" } }
+          },
+          [_vm._v("Create New Skill")]
+        )
+      ],
+      1
+    )
   ])
 }
 var staticRenderFns = [
@@ -49853,6 +49855,8 @@ var staticRenderFns = [
     return _c("thead", [
       _c("tr", [
         _c("th", [_vm._v("Name")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Description")]),
         _vm._v(" "),
         _c("th", { attrs: { width: "150" } }, [_vm._v(" ")])
       ])
